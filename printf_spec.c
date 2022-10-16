@@ -31,3 +31,24 @@ int printf_s(va_list s)
 	return (1);
 }
 
+/**
+ * printf_d -  A function that prints an integer in decimal form
+ * @d: lists of argument
+ *
+ * Return: number of character printed
+ */
+int Printf_d(va_list d)
+{
+	int i, divider, sign;
+	unsigned int num;
+
+	i = va_arg(d, int);
+
+	if (n < 0)
+	{
+		_putchar('-');
+		num = n * -1;
+	}
+	else
+		num = n;
+	return (1);
