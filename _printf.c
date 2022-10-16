@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * printf - Function that produces output according to a format.
+ * check_specifiers - Function that checks the specifiers and maps to
+ * the correct function.
  * @format: A character string.
- * @...: Values to be substituted.
- * Return: Number of characters printed.
+ * Return: Integer.
  */
 int (*check_specifiers)(const char *format)
 {
@@ -22,5 +22,5 @@ int (*check_specifiers)(const char *format)
 			break;
 		}
 	}
-	return (ps[i].func);
+	return (ps[i].spec_func);
 }
