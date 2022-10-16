@@ -1,12 +1,12 @@
 #include "main.h"
 /**
  * printf_c - A function that prints characters
- * @format: format of the arguments
+ * @c: format of the arguments
  *
  * Return: Amount of characters printed
  */
-int printf_c(va_list format)
+int printf_c(va_list c)
 {
-	_putchar(va_arg(format, int));
+	_putchar(va_arg(c, int));
 	return (1);
 }
