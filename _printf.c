@@ -5,9 +5,9 @@
  * @format: A character string.
  * Return: Integer.
  */
-int (*check_specifiers)(const char *format)
+int (*check_specifiers(const char *format))(va_list)
 {
-	int i;
+	unsigned int i;
 
 	print_specs ps[] = {
 		{'c', printf_c},
@@ -33,7 +33,7 @@ int (*check_specifiers)(const char *format)
  */
 int _printf(const char *format, ...)
 {
-	int i, count = 0;
+	unsigned int i, count = 0;
 	va_list valist;
 	int (*f)(va_list);
 
