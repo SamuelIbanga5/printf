@@ -17,12 +17,12 @@ int printf_c(va_list c)
  *
  * Return: characters printed
  */
-int printf_s(va_list c)
+int printf_s(va_list s)
 {
 	int i;
-	char *str = va_arg(c, char *);
+	char *str = va_arg(s, char *);
 
-	for (i=0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 	return (i);
 }
