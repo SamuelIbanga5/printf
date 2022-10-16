@@ -3,7 +3,7 @@
  * printf_c - A function that prints characters
  * @c: list of the arguments
  *
- * Return: characters printed
+ * Return: number of characters printed
  */
 int printf_c(va_list c)
 {
@@ -13,9 +13,9 @@ int printf_c(va_list c)
 
 /**
  * printf_s - A function that prints a string
- * @c: lists of the argument
+ * @s: lists of the argument
  *
- * Return: characters printed
+ * Return: number of characters printed
  */
 int printf_s(va_list s)
 {
@@ -24,6 +24,6 @@ int printf_s(va_list s)
 
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
-	return (i);
+	return (1);
 }
 
