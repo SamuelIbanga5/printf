@@ -3,7 +3,7 @@
  * printf_c - A function that prints characters
  * @c: list of the arguments
  *
- * Return: characters printed
+ * Return: number of characters printed
  */
 int printf_c(va_list c)
 {
@@ -15,7 +15,7 @@ int printf_c(va_list c)
  * printf_s - A function that prints a string
  * @s: lists of the argument
  *
- * Return: characters printed
+ * Return: number of characters printed
  */
 int printf_s(va_list s)
 {
