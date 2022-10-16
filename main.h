@@ -8,10 +8,10 @@
  * @spec: Specifier character.
  * @spec_func: Specifiers function.
  */
-struct print
+typedef struct print
 {
 	char *spec;
-	void (*func)(va_list);
+	void (*spec_func)(va_list);
 } print_specs;
 
 #endif /* _MAIN_H_ */

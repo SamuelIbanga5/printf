@@ -1,36 +1,40 @@
-0x11. C - PRINTF
+# 0x11. C - PRINTF
 
-This is a collaboration on creating printf function by Nduka Elizabette and Ibanga Samuel.
+This is a collaboration on simple implementation of printf function by Nduka Elizabette and Ibanga Samuel.
 As part of the ALX - Software engineering program
 
-0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
+# Description
 
-1. Education is when you read the fine print. Experience is what you get if you don't
+The _printf() function sends a formatted string to the standard output (the display). The function returns the number of characters printed (excluding the null byte used to end output to string). The conversion specifiers to be handled are:
 
-2. With a face like mine, I do better in print
+%c: Prints a single character.
 
-3. What one has not experienced, one will never understand in print
+%s: Prints a string of characters.
 
-4. Nothing in fine print is ever good news
+%d: Prints integers.
 
-5. My weakness is wearing too much leopard print
+%i: Prints integers.
 
-6. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
+%b: Prints the binary representation of an unsigned decimal.
 
-7. The big print gives and the small print takes away
+%u: Prints unsigned integers
 
-8. Sarcasm is lost in print
+%o: Prints the octal representation of an unsigned decimal
 
-9. Print some money and give it to us for the rain forests
+%x: Prints the hexadecial representation of an unsigned decimal in lowercase letters
 
-10. The negative is the equivalent of the composer's score, and the print the performance
+%X:Prints the hexadecial representation of an unsigned decimal in uppercase letters
 
-11. It's depressing when you're still around and your albums are out of print
+%S: Prints the string
 
-12. Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
+%p: Prints an address or a pointer
 
-13. Print is the sharpest and the strongest weapon of our party
+h: Print half character to vary the size
 
-14. The flood of print has turned reading into a process of gulping rather than savoring
+l: Print long characters
 
-15. *
+%r: Prints a reversed string
+
+%R: Prints the Rot13'ed interpretation of a string
+
+Also the +, space, #, 0, - flags 
