@@ -2,6 +2,7 @@
 #define _MAIN_H_
 
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
  * struct print - Structure showing specifiers and connected functions.
