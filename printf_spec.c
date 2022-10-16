@@ -13,17 +13,17 @@ int printf_c(va_list c)
 
 /**
  * printf_s - A function that prints a string
- * @c: lists of the argument
+ * @s: lists of the argument
  *
  * Return: characters printed
  */
-int printf_s(va_list c)
+int printf_s(va_list s)
 {
 	int i;
-	char *str = va_arg(c, char *);
+	char *str = va_arg(s, char *);
 
 	for (i=0; str[i] != '\0'; i++)
 		_putchar(str[i]);
-	return (i);
+	return (1);
 }
 
