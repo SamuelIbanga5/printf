@@ -14,4 +14,9 @@ typedef struct print
 	void (*spec_func)(va_list);
 } print_specs;
 
+int _putchar(char c);
+int _printf(const char *format, ...);
+int printf_c(va_list c);
+int printf_s(va_list s);
+
 #endif /* _MAIN_H_ */
