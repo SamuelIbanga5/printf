@@ -24,14 +24,10 @@ int printf_s(va_list s)
 	int i;
 	char *str = va_arg(s, char *);
 
-	i = 0;
 	if (str == NULL)
 		str = "(null)";
-	while (str[i])
-	{
+	for (i = 0; str[i]; i++)
 		_putchar(str[i]);
-		i++;
-	}
 	return (i);
 }
 
