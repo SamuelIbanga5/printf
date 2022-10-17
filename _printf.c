@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, count = 0;
+	unsigned int i, count = 0;
 	va_list valist;
 	int (*f)(va_list);
 
@@ -15,13 +15,15 @@ int _printf(const char *format, ...)
 	va_start(valist, format);
 	while (format[i])
 	{
-		for (; format[i] != '%' && format[i]; i++)
+		for (i = 0; format[i] != '%' && format[i]; i++)
 		{
 			_putchar(format[i]);
 			count++;
 		}
 		if (!format[i])
+		{
 			return (count);
+		}
 		f = check_specifiers(&format[i + 1]);
 		if (f != NULL)
 		{
