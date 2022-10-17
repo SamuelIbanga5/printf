@@ -26,9 +26,9 @@ int printf_s(va_list s)
 	if (str == NULL)
 		str == "(null)";
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i]; i++)
 		_putchar(str[i]);
-	return (1);
+	return (i);
 }
 
 /**
