@@ -38,7 +38,7 @@ int printf_s(va_list s)
  */
 int printf_d(va_list d)
 {
-	int i, divider, sign;
+	int i, divider, sign, n = 10;
 	unsigned int num;
 
 	i = va_arg(d, int);
@@ -51,3 +51,4 @@ int printf_d(va_list d)
 	else
 		num = n;
 	return (1);
+}
