@@ -7,10 +7,8 @@
  */
 int printf_c(va_list c)
 {
-	int count = 0;
 	char ch = (char)va_arg(c, int);
 
-	count += 1;
 	_putchar(ch);
 	return (1);
 }

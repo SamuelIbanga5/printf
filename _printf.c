@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_start(valist, format);
 	while (format[i])
 	{
-		for (i = 0; format[i] && format[i] != '%'; i++)
+		for (i = 0; format[i] != '%' && format[i]; i++)
 		{
 			_putchar(format[i]);
 			count++;
