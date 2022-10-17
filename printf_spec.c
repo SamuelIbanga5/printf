@@ -7,10 +7,8 @@
  */
 int printf_c(va_list c)
 {
-	int count = 0;
 	char ch = (char)va_arg(c, int);
 
-	count += 1;
 	_putchar(ch);
 	return (1);
 }
@@ -26,10 +24,14 @@ int printf_s(va_list s)
 	int i;
 	char *str = va_arg(s, char *);
 
+	i = 0;
 	if (str == NULL)
 		str = "(null)";
-	for (i = 0; str[i]; i++)
+	while (str[i])
+	{
 		_putchar(str[i]);
+		i++;
+	}
 	return (i);
 }
 
