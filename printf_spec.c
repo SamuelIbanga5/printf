@@ -7,8 +7,10 @@
  */
 int printf_c(va_list c)
 {
+	int count = 0;
 	char ch = (char)va_arg(c, int);
 
+	count += 1;
 	_putchar(ch);
 	return (1);
 }
@@ -29,26 +31,4 @@ int printf_s(va_list s)
 	for (i = 0; str[i]; i++)
 		_putchar(str[i]);
 	return (i);
-}
-
-/**
- * printf_d -  A function that prints an integer in decimal form
- * @d: lists of argument
- * Return: number of character printed
- */
-int printf_d(va_list d)
-{
-	int i, divider, sign, n = 10;
-	unsigned int num;
-
-	i = va_arg(d, int);
-
-	if (n < 0)
-	{
-		_putchar('-');
-		num = n * -1;
-	}
-	else
-		num = n;
-	return (1);
 }

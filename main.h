@@ -12,7 +12,7 @@
 typedef struct print
 {
 	char *spec;
-	void (*spec_func)(va_list);
+	int (*spec_func)(va_list);
 } print_specs;
 
 int _putchar(char c);
