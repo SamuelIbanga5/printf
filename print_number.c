@@ -2,7 +2,7 @@
 
 /**
  * print_number - print a number
- * @n: the number to print
+ * @args: the number to print
  */
 void print_number(va_list args)
 {
