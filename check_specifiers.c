@@ -12,6 +12,7 @@ int (*check_specifiers(const char *format))(va_list)
 	print_specs ps[] = {
 		{"c", printf_c},
 		{"s", printf_s},
+		{"d", printf_d},
 		{NULL, NULL}
 	};
 	for (i = 0; ps[i].spec != NULL; i++)
