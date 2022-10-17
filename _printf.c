@@ -14,7 +14,6 @@ int (*check_specifiers(const char *format))(va_list)
 		{'s', printf_s},
 		{NULL, NULL}
 	};
-
 	for (i = 0; ps[i].spec != NULL; i++)
 	{
 		if (*(ps[i].spec) == *format)
@@ -28,7 +27,6 @@ int (*check_specifiers(const char *format))(va_list)
 /**
  * _printf - Function that produces output according to a format.
  * @format: A character string.
- *
  * Return: The number of characters printed.
  */
 int _printf(const char *format, ...)
@@ -38,9 +36,7 @@ int _printf(const char *format, ...)
 	int (*f)(va_list);
 
 	if (format == NULL)
-	{
 		return (-1);
-	}
 	va_start(valist, format);
 	while (format[i])
 	{
@@ -61,19 +57,13 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		if (!format[i + 1])
-		{
 			return (-1);
-		}
 		_putchar(format[i]);
 		count++;
 		if (format[i + 1] == '%')
-		{
 			i += 2;
-		}
 		else
-		{
 			i++;
-		}
 	}
 	va_end(valist);
 	return (count);
