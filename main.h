@@ -19,5 +19,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int printf_c(va_list c);
 int printf_s(va_list s);
+int printf_d(va_list d);
 
 #endif /* _MAIN_H_ */
