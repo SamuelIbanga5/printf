@@ -20,5 +20,6 @@ int _printf(const char *format, ...);
 int printf_c(va_list c);
 int printf_s(va_list s);
 int printf_d(va_list d);
+int (*check_specifiers(const char *format))(va_list);
 
 #endif /* _MAIN_H_ */
