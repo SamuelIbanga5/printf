@@ -25,7 +25,7 @@ int printf_s(va_list s)
 	char *str = va_arg(s, char *);
 
 	if (str == NULL)
-		str == "(null)";
+		str = "(null)";
 
 	for (i = 0; str[i]; i++)
 		_putchar(str[i]);
