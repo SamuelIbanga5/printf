@@ -34,3 +34,30 @@ int printf_s(va_list s)
 	}
 	return (i);
 }
+
+/**
+ * print_r - prints string in reverse
+ * @r: string
+ * @p: the parameters struct
+ *
+ * Return: number bytes printed
+ */
+int print_rev(va_list r, params_t *p)
+{
+
+	int len, sum = 0;
+	char *str;
+	(void)params;
+
+       	str = va_arg(r, char *);
+	if (str)
+	{
+		for (len = 0; *str; str++)
+			len++;
+		str--;
+
+		for (; len > 0; len--, str--)
+			sum += _putchar(*str);
+	}
+	return (sum);
+}
