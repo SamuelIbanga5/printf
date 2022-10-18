@@ -42,12 +42,11 @@ int printf_s(va_list s)
  *
  * Return: number bytes printed
  */
-int print_rev(va_list r, params_t *p)
+int print_r(va_list r)
 {
 
 	int len, sum = 0;
 	char *str;
-	(void)params;
 
        	str = va_arg(r, char *);
 	if (str)
