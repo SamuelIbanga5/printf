@@ -34,3 +34,30 @@ int printf_s(va_list s)
 	}
 	return (i);
 }
+
+/**
+ * printf_r - prints string in reverse
+ * @r: string
+ *
+ * Return: number bytes printed
+ */
+int printf_r(va_list r)
+{
+
+	int len, i = 0;
+	char *str;
+
+	str = va_arg(r, char *);
+	if (str == NULL)
+		str = ")llin(";
+	while (str[i])
+	{
+		i++;
+	}
+	for (i -= 1; i >= 0; i--)
+	{
+		_putchar(str[i]);
+		len++;
+	}
+	return (len);
+}
