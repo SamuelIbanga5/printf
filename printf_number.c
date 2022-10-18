@@ -77,3 +77,36 @@ int printf_i(va_list i)
 	}
 	return (count);
 }
+
+/**
+ * printf_b - Function that converts unsigned int argument to
+ * binary.
+ * @b: Unsigned integer to convert.
+ * Return: Number of digits.
+ */
+int printf_b(va_list b)
+{
+	int count, temp, i;
+	char str[256];
+	unsigned int digits, num;
+
+	count = 0;
+	i = 0;
+	num = va_arg(b, unsigned int);
+	while (num)
+	{
+		digits = num % 2;
+		for (; i < count + 1; i += 1)
+		{
+			str[i] = (char)digits;
+		}
+		num = num / 2;
+		count += 1;
+	}
+	temp = count - 1;
+	for (; temp >= i; temp--)
+	{
+		_putchar(str[temp]);
+	}
+	return (count);
+}

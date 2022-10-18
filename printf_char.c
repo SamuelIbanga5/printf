@@ -36,12 +36,12 @@ int printf_s(va_list s)
 }
 
 /**
- * print_r - prints string in reverse
+ * printf_r - prints string in reverse
  * @r: string
  *
  * Return: number bytes printed
  */
-int print_r(va_list r)
+int printf_r(va_list r)
 {
 
 	int len, i = 0;
