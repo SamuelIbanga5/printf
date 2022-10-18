@@ -38,7 +38,6 @@ int printf_s(va_list s)
 /**
  * print_r - prints string in reverse
  * @r: string
- * @p: the parameters struct
  *
  * Return: number bytes printed
  */
@@ -48,13 +47,12 @@ int print_r(va_list r)
 	int len, sum = 0;
 	char *str;
 
-       	str = va_arg(r, char *);
+	str = va_arg(r, char *);
 	if (str)
 	{
 		for (len = 0; *str; str++)
 			len++;
 		str--;
-
 		for (; len > 0; len--, str--)
 			sum += _putchar(*str);
 	}
