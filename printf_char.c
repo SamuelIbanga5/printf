@@ -44,17 +44,20 @@ int printf_s(va_list s)
 int print_r(va_list r)
 {
 
-	int len, sum = 0;
+	int len, i = 0;
 	char *str;
 
 	str = va_arg(r, char *);
-	if (str)
+	if (str == NULL)
+		str = ")llin(";
+	while (str[i])
 	{
-		for (len = 0; *str; str++)
-			len++;
-		str--;
-		for (; len > 0; len--, str--)
-			sum += _putchar(*str);
+		i++;
 	}
-	return (sum);
+	for (i -= 1; i >= 0; i--)
+	{
+		_putchar(str[i]);
+		len++;
+	}
+	return (len);
 }
