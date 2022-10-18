@@ -61,3 +61,42 @@ int print_r(va_list r)
 	}
 	return (len);
 }
+
+/**
+ * printf_R - Function that prints the rot13'ed string
+ * @R: string
+ * Return: Number of characters
+ */
+int printf_R(va_list R)
+{
+	int i, j;
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *str;
+	int count;
+
+	count = 0;
+	str = va_arg(R, char *);
+	if (str == NULL)
+	{
+		str = "(ahyy)";
+	}
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		for (j = 0; a[j]; j++)
+		{
+			if (str[i] == a[j])
+			{
+				_putchar(b[j]);
+				count += 1;
+				break;
+			}
+		}
+		if (!a[j])
+		{
+			_putchar(str[i]);
+			count++;
+		}
+	}
+	return (count);
+}
