@@ -7,6 +7,8 @@ As part of the ALX - Software engineering program
 
 The _printf() function sends a formatted string to the standard output (the display). The function returns the number of characters printed (excluding the null byte used to end output to string). The conversion specifiers to be handled are:
 
+Prototype: int _printf(const char *, ...);
+
 %c: Prints a single character.
 
 %s: Prints a string of characters.
